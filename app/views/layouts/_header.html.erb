@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", root_path, id: "logo" %>
+    <nav>
+       <% if current_user %>
+        <ul class="nav navbar-nav pull-right">
+          <li><%= image_tag current_user.image, alt: current_user.name %></li>
+          <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Log in', '/auth/google_oauth2' %></li>
+        </ul>
+      <% end %>
+    </nav>
+  </div>
+</header>

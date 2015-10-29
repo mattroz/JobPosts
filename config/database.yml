@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: backend_saas
+  pool: 5
+  username: azotov
+  password:
+  host: localhost
+
+test: 
+  adapter: postgresql
+  encoding: utf8
+  database: backend_saas
+  pool: 5
+  username: azotov
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: backend_saas
+  pool: 5
+  username: azotov
+  password:
+  host: localhost
