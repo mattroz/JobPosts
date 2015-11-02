@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :set_link, only: [:edit, :update, :destroy]
   # before_action :authenticate_user!, except: [:index, :show, :feed, :digest]
   # before_action :authorized_user, only: [:edit, :update, :destroy]
   # GET /links
@@ -39,15 +39,15 @@ end
   # GET /links/1
   # GET /links/1.json
   def show
-    @link = Link.friendly.find(params[:id])
-  if request.path != link_path(@link)
-    redirect_to @link, status: :moved_permanently
-  else
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @link }
-    end
-  end
+  #   @link = Link.friendly.find(params[:id])
+  # if request.path != link_path(@link)
+  #   redirect_to @link, status: :moved_permanently
+  # else
+  #   respond_to do |format|
+  #     format.html # show.html.erb
+  #     format.json { render json: @link }
+  #   end
+  # end
   end
 
   # GET /links/new
