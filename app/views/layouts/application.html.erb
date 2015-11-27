@@ -6,12 +6,13 @@
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <!-- Include jQuery. -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <%= render 'layouts/shim' %>
   </head>
   <body>
   
       <%= yield %>
-     
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>

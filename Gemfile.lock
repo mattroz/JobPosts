@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/jejacks0n/mercury.git
+  revision: 1cc637b0bccea19085f824d2881c6513ed5ee8ae
+  specs:
+    mercury-rails (0.9.0)
+      coffee-rails (>= 3.2.2)
+      railties (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,18 +47,39 @@ GEM
     addressable (2.3.8)
     aftership (4.1.1)
       httpclient (~> 2.5.2)
+    ahoy_matey (1.2.1)
+      addressable
+      browser (>= 0.4.0)
+      errbase
+      geocoder
+      rails
+      referer-parser (>= 0.3.0)
+      request_store
+      user_agent_parser
+      uuidtools
     arel (6.0.3)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
+    aws-sdk (2.2.1)
+      aws-sdk-resources (= 2.2.1)
+    aws-sdk-core (2.2.1)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.2.1)
+      aws-sdk-core (= 2.2.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
+    browser (1.0.1)
     builder (3.2.2)
     byebug (6.0.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -59,6 +88,14 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     debug_inspector (0.0.2)
+    devise (3.5.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    errbase (0.0.3)
     erubis (2.7.0)
     execjs (2.6.0)
     extlib (0.9.16)
@@ -66,6 +103,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    geocoder (1.2.12)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gmail (0.6.0)
@@ -100,6 +138,7 @@ GEM
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jmespath (1.1.3)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -118,6 +157,7 @@ GEM
       mime-types (>= 1.16, < 3)
     memoist (0.12.0)
     mime-types (2.6.2)
+    mimemagic (0.3.0)
     mini_portile (0.6.2)
     minitest (5.8.0)
     multi_json (1.11.2)
@@ -155,6 +195,13 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
+    orm_adapter (0.5.0)
+    paperclip (4.3.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.18.3)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -186,6 +233,10 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    referer-parser (0.3.0)
+    request_store (1.2.1)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     retriable (1.4.1)
     sass (3.4.18)
     sass-rails (5.0.4)
@@ -203,6 +254,9 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
+    social-share-button (0.1.10)
+      coffee-rails
+      sass-rails
     spring (1.4.0)
     sprockets (3.3.4)
       rack (~> 1.0)
@@ -224,6 +278,10 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    user_agent_parser (2.3.0)
+    uuidtools (2.1.5)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -235,24 +293,30 @@ PLATFORMS
 
 DEPENDENCIES
   aftership (~> 4.1.0)
+  ahoy_matey
+  aws-sdk (~> 2)
   bcrypt
   bootstrap-sass (= 3.2.0.0)
   byebug
   coffee-rails (~> 4.1.0)
+  devise
   friendly_id
   gmail
   google-api-client
   jbuilder (~> 2.0)
   jquery-rails
+  mercury-rails!
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-linkedin-oauth2
   omniauth-stripe-connect
   omniauth-twitter
+  paperclip
   pg
   rails (= 4.2.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  social-share-button
   spring
   trackerific
   turbolinks

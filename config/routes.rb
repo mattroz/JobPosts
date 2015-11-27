@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :links
-  get 'sessions/new'
-
-  get 'session/new'
-  get 'signup'  => 'users#new'
+  mount Mercury::Engine => '/'
+  Mercury::Engine.routes
+  devise_for :users
+  resources :links do
+  member { post :mercury_update }
+  end
+  # devise_for :users, controllers: { sessions: "users/sessions" }
+  # devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
+  # get 'sessions/new'
+  
+  # get 'session/new'
+  # get 'signup'  => 'users#new'
   root to: 'links#index'
-  get '/auth/:provider/callback', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  # get '/auth/:provider/callback', to: 'sessions#create'
+  # delete '/logout', to: 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

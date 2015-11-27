@@ -12,4 +12,34 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
+
+
+.social-share-button-facebook {
+	display: inline-block;
+	width: 64px !important;
+	height: 64px !important;
+	background: url("/images/facebook.png") no-repeat !important;
+}
+
+.social-share-button-twitter {
+	display: inline-block;
+	width: 64px !important;
+	height: 64px !important;
+	background: url("/images/twitter.png") no-repeat !important;
+}
+
+.social-share-button-google_plus {
+	display: inline-block;
+	width: 64px !important;
+	height: 64px !important;
+	background: url("/images/googleplus.png") no-repeat !important;
+}
+
+.social-share-button-email {
+	display: inline-block;
+	width: 64px !important;
+	height: 64px !important;
+	background: url("/images/email.png") no-repeat !important;
+}

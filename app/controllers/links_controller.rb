@@ -19,6 +19,14 @@ def digest
     end
 end
 
+
+def mercury_update
+  link = Link.find(params[:id])
+  link.name = params[:content][:page_name][:value]
+  link.content = params[:content][:page_content][:value]
+  link.save!
+  render text: ""
+end
   
   def index
     # @links = Link.paginate(page: params[:page], per_page: 30).find(:all, :order => "extract (day from created_at) desc, cached_votes_up desc")

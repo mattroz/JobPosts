@@ -33,6 +33,12 @@ gem 'bcrypt'
 gem 'google-api-client', :require => 'google/api_client'
 gem 'gmail'
 gem 'friendly_id'
+gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git'
+gem 'aws-sdk', '~> 2'
+gem 'devise'
+gem 'paperclip'
+gem 'social-share-button'
+gem 'ahoy_matey'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

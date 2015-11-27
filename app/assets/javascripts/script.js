@@ -7,6 +7,23 @@
  *
  */
  
+
+$(document).ready(function() {
+
+  $('#upload').click(function() {
+    // Will Work!!!!
+    alert('hi')
+    $('#fileInput').click();
+    return false;
+  });
+
+  $('#upload2').click(function() {
+    // Will Work!!!!
+    $('#fileInput2').click();
+    return false;
+  });
+});
+
 // $(document).ready(function() {
 // 	var timeout,
 // 		sections = new Array(),

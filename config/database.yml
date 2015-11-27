@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: backend_saas
+  database: jobprops
   pool: 5
   username: azotov
   password:
@@ -10,7 +10,7 @@ development:
 test: 
   adapter: postgresql
   encoding: utf8
-  database: backend_saas
+  database: jobprops
   pool: 5
   username: azotov
   password:
@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: backend_saas
+  database: jobprops
   pool: 5
   username: azotov
   password:

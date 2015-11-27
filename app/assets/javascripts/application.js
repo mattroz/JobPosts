@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require social-share-button
+//= require ahoy
 //= require_tree .
 
 
@@ -20,3 +22,11 @@ $("input").on("click", function(e) {
   e.preventDefault();
   history.pushState({}, "", this.href);
 });
+
+$(function() {
+          $('#edit').editable({inlineMode: true})
+
+          $('#fileInput').hide();
+      });
+
+$('#fileInput').hide();
