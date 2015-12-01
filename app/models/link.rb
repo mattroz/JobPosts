@@ -6,5 +6,5 @@ class Link < ActiveRecord::Base
 	
 extend FriendlyId
 friendly_id :title, use: :slugged
-self.per_page = 30
+#self.per_page = 30
 end
