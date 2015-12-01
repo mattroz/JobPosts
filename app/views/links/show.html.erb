@@ -14,8 +14,8 @@
      
       <div class="row" style="">
     <ul class="list-inline">
-   <li style="padding:0px;"> <%= social_share_button_tag("My Home Page", :url => "http://mysite.com/foo") %></li>
-  <li style="padding:0px;"><a style="display: inline-block;" href="https://www.linkedin.com/shareArticle?mini=true&url=www.jobs.com&title=My%20title&summary=summary&source="><img src="/images/linkedin.png"></a></li>
+   <li style="padding:0px;"> <%= social_share_button_tag("My Home Page", :url => "http://mysite.com/foo", :popup => "true") %></li>
+  <li style="padding:0px;"><a style="display: inline-block;" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=www.jobs.com&title=My%20title&summary=summary&source=','popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');"><img src="/images/linkedin.png"></a></li>
 </ul>
 </div>
   </div>
@@ -26,7 +26,7 @@
 
 <div class="testimonials" style="margin-top: 0px;">
 
-<div class="container" id="explore"> 
+<div class="container" id="explore"> )
   <!-- Hero Image -->
    <div class="row col-centered2" style="max-width: 650px;">
   <div class="section-title">
